@@ -1,0 +1,17 @@
+//
+// common__target__ios.xcconfig
+// Brian T. Kelley <brian@briantkelley.com>
+//
+// Xcode settings applicable to all iOS targets and configurations
+//
+
+
+// Architectures
+ARCHS = $(ARCHS_STANDARD_INCLUDING_64_BIT)
+SDKROOT = iphoneos
+
+// Deployment
+SKIP_INSTALL = YES
+
+// Deployment (iOS)
+IPHONEOS_DEPLOYMENT_TARGET = 7.0

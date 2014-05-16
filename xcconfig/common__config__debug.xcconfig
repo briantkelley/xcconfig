@@ -1,0 +1,23 @@
+//
+// common__config__debug.xcconfig
+// Brian T. Kelley <brian@briantkelley.com>
+//
+// Xcode settings applicable to all targets in Debug configuration
+//
+#include "common.xcconfig"
+
+
+// Architectures
+ONLY_ACTIVE_ARCH = YES
+
+// Build Options
+DEBUG_INFORMATION_FORMAT = dwarf
+
+// Deployment
+COPY_PHASE_STRIP = NO
+
+// Apple LLVM compiler - Code Generation
+GCC_OPTIMIZATION_LEVEL = 0
+
+// Apple LLVM compiler - Preprocessing
+GCC_PREPROCESSOR_DEFINITIONS = DEBUG=1
