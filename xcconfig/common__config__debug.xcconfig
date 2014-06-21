@@ -21,3 +21,6 @@ GCC_OPTIMIZATION_LEVEL = 0
 
 // Apple LLVM compiler - Preprocessing
 GCC_PREPROCESSOR_DEFINITIONS = DEBUG=1
+
+// Swift Compiler - Code Generation
+SWIFT_OPTIMIZATION_LEVEL = -Onone

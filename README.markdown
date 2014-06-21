@@ -8,6 +8,8 @@ With the advent of the App Store the advantage of dynamic libraries or framework
 
 In Xcode, create a new Dynamic Library target, add the static library as a build dependency, add an Empty source file matching the language used in static library and link the static library, along with any other necessary dependencies. This strategy helps static libraries avoid circular dependencies on each other.
 
+The empty Swift file is made available because a Swift file is required in a Target to generate a Swift Module when an Objective-C Bridging Header is specified. Since no library or target prior to June 2014 used Swift, this file is convenient for making existing libraries available as Swift modules.
+
 ## xcconfig
 
 `common__config__debug.xcconfig` and `common__config__release.xcconfig` are designed to be used as the project level build settings files for the Debug and Release configurations, respectively. `common__target__ios.xcconfig` and `common__target__osx.xcconfig` are designed to be included in a Target's xcconfig file or, less preferably, set as the Target's build settings file in conjunction with build settings specified directly int he Xcode project.
