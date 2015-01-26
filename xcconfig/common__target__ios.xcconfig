@@ -8,10 +8,10 @@
 
 // Architectures
 ARCHS = $(ARCHS_STANDARD_INCLUDING_64_BIT)
-SDKROOT = iphoneos
+SDKROOT = iphoneos8
 
 // Deployment
 SKIP_INSTALL = YES
 
 // Deployment (iOS)
-IPHONEOS_DEPLOYMENT_TARGET = 7.0
+IPHONEOS_DEPLOYMENT_TARGET = 8.0
