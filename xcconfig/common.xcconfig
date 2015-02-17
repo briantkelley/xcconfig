@@ -9,6 +9,9 @@
 // Build Options
 GCC_VERSION = com.apple.compilers.llvm.clang.1_0
 
+// Deployment
+SKIP_INSTALL = YES
+
 // Linking
 DEAD_CODE_STRIPPING = YES
 
