@@ -29,3 +29,6 @@ MTL_OPTIMIZATION_LEVEL = 0
 
 // Swift Compiler - Code Generation
 SWIFT_OPTIMIZATION_LEVEL = -Onone
+
+// Undocumented
+CLANG_ADDRESS_SANITIZER=YES
