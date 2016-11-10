@@ -8,7 +8,7 @@
 
 // Architectures
 ARCHS = $(ARCHS_STANDARD)
-SDKROOT = iphoneos9.0
+SDKROOT = iphoneos10.0
 
 // Build Options
 ENABLE_BITCODE = NO
@@ -17,4 +17,4 @@ ENABLE_BITCODE = NO
 CODE_SIGN_IDENTITY[sdk=iphoneos*] = iOS Developer
 
 // Deployment (iOS)
-IPHONEOS_DEPLOYMENT_TARGET = 9.0
+IPHONEOS_DEPLOYMENT_TARGET = 10.0

@@ -1,5 +1,5 @@
 //
-// common__target__osx.xcconfig
+// common__target__macos.xcconfig
 // Brian T. Kelley <brian@briantkelley.com>
 //
 // Xcode settings applicable to all OS X targets and configurations
@@ -8,10 +8,10 @@
 
 // Architectures
 ARCHS = $(ARCHS_STANDARD_64_BIT)
-SDKROOT = macosx10.11
+SDKROOT = macosx10.12
 
 // Deployment
-MACOSX_DEPLOYMENT_TARGET = 10.11
+MACOSX_DEPLOYMENT_TARGET = 10.12
 
 // Deployment (OS X)
 COMBINE_HIDPI_IMAGES = YES
