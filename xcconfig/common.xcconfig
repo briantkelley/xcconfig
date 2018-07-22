@@ -5,7 +5,6 @@
 // Xcode settings applicable to all targets and configurations
 //
 
-
 // Deployment
 SKIP_INSTALL = YES
 
@@ -32,7 +31,7 @@ WARNING_CFLAGS = -Wall
 GCC_C_LANGUAGE_STANDARD = c11
 
 // Apple LLVM - Language - C++
-CLANG_CXX_LANGUAGE_STANDARD = c++14
+CLANG_CXX_LANGUAGE_STANDARD = c++17
 CLANG_CXX_LIBRARY = libc++
 GCC_ENABLE_CPP_EXCEPTIONS = YES
 GCC_ENABLE_CPP_RTTI = NO

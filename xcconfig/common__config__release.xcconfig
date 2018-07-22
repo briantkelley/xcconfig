@@ -6,7 +6,6 @@
 //
 #include "common.xcconfig"
 
-
 // Build Options
 DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
 VALIDATE_PRODUCT = YES
@@ -23,4 +22,5 @@ GCC_PREPROCESSOR_DEFINITIONS = $(inherited) NDEBUG=1
 MTL_OPTIMIZATION_LEVEL = s
 
 // Swift Compiler - Code Generation
-SWIFT_OPTIMIZATION_LEVEL = -Owholemodule
+SWIFT_COMPILATION_MODE = wholemodule
+SWIFT_OPTIMIZATION_LEVEL = -Osize

@@ -5,10 +5,9 @@
 // Xcode settings applicable to all iOS targets and configurations
 //
 
-
 // Architectures
 ARCHS = $(ARCHS_STANDARD)
-SDKROOT = iphoneos11.0
+SDKROOT = iphoneos11.4
 
 // Build Options
 ENABLE_BITCODE = NO
