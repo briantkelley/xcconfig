@@ -1,7 +1,6 @@
 //
-// Empty.mm
-// Brian T. Kelley <brian@briantkelley.com>
-//
-// The compiler driver requires a source file to produce an executable image. Use Empty.mm to create
-// an executable image from a static library with object files built from Objective-C++ sources.
+// The Xcode build system requires an Objective-C++ or C++ source file to
+// produce an executable image and link the C++ standard library. Use Empty.mm
+// to create an executable image from a static library containing object files
+// built from Objective-C++ sources, and/or C++ and Objective-C sources.
 //

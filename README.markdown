@@ -4,11 +4,9 @@ xcode-build-utilites provides xcconfig files for using the latest and strict bui
 
 ## source
 
-With the introduction of the App Sandbox on OS X, the advantage of dynamic libraries or frameworks has all but disappeared, leaving apps that use bundled dynamic libraries or frameworks with a slower boot time and fewer link-time optimizations. Converting dynamic libraries and frameworks to static libraries can improve boot performance and reduce bundle size, but, without building a binary executable, verifying link dependencies for a given library is difficult. `source` contains empty source files for each language so a dynamic library can be built directly from a static library.
+Use of static libraries can improve boot performance and reduce bundle size relative to dynamic libraries and frameworks. But, without building an executable image, verifying link dependencies for a static library is difficult. `source` contains empty source files for each language for use with Xcode to easily produce a dynamic library directly from a static library.
 
-In Xcode, create a new Dynamic Library target, add the static library as a build dependency, add an Empty source file matching the language used in static library and link the static library, along with any other necessary dependencies. This strategy helps static libraries avoid circular dependencies on each other.
-
-The empty Swift file is made available because a Swift file is required in a Target to generate a Swift Module when an Objective-C Bridging Header is specified. This file is convenient for making existing C or Objective-C libraries available as Swift modules.
+In Xcode, create a new Dynamic Library target, add the static library as a build dependency, add an Empty source file matching the language(s) used in static library, and link the static library and its dependencies. In addition to verifying dependency correctness, this strategy helps prevent circular dependencies in static libraries.
 
 ## xcconfig
 
