@@ -1,8 +1,5 @@
 //
-// common__config__release.xcconfig
-// Brian T. Kelley <brian@briantkelley.com>
-//
-// Xcode settings applicable to all targets in Release configuration
+// Copyright (c) 2014-2019 Brian T. Kelley
 //
 #include "common.xcconfig"
 

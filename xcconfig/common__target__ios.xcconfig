@@ -1,19 +1,13 @@
 //
-// common__target__ios.xcconfig
-// Brian T. Kelley <brian@briantkelley.com>
-//
-// Xcode settings applicable to all iOS targets and configurations
+// Copyright (c) 2014-2019 Brian T. Kelley
 //
 
 // Architectures
 ARCHS = $(ARCHS_STANDARD)
-SDKROOT = iphoneos11.4
-
-// Build Options
-ENABLE_BITCODE = NO
+SDKROOT = iphoneos12.1
 
 // Code Signing
 CODE_SIGN_IDENTITY[sdk=iphoneos*] = iOS Developer
 
 // Deployment (iOS)
-IPHONEOS_DEPLOYMENT_TARGET = 11.0
+IPHONEOS_DEPLOYMENT_TARGET = 12.0

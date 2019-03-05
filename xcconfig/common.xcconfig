@@ -1,12 +1,6 @@
 //
-// common.xcconfig
-// Brian T. Kelley <brian@briantkelley.com>
+// Copyright (c) 2014-2019 Brian T. Kelley
 //
-// Xcode settings applicable to all targets and configurations
-//
-
-// Deployment
-SKIP_INSTALL = YES
 
 // Linking
 DEAD_CODE_STRIPPING = YES
@@ -25,7 +19,16 @@ USE_HEADERMAP = NO
 GCC_NO_COMMON_BLOCKS = YES
 
 // Apple LLVM - Custom Compiler Flags
-WARNING_CFLAGS = -Wall
+	// -Wc++98-compat[-pedantic] is disabled because the standard is 20+ years
+	//     old. C++11 compatibility is the oldest anyone should care about.
+	// -Wdirect-ivar-access is disabled because accessing an ivar in -init or
+	//     -dealloc, or which is an implementation detail and not a property,
+	//     is both reasonable and valid.
+	// -Wgnu-zero-variadic-macro-arguments is disabled so NSAssert compiles
+	//     when assertions are disabled.
+	// -Wpadded is disabled so structures don't require dummy variables to
+	//     explicitly expand to the alignment boundary.
+WARNING_CFLAGS = -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-direct-ivar-access -Wno-gnu-zero-variadic-macro-arguments -Wno-padded
 
 // Apple LLVM - Language
 GCC_C_LANGUAGE_STANDARD = c11
@@ -34,7 +37,7 @@ GCC_C_LANGUAGE_STANDARD = c11
 CLANG_CXX_LANGUAGE_STANDARD = c++17
 CLANG_CXX_LIBRARY = libc++
 GCC_ENABLE_CPP_EXCEPTIONS = YES
-GCC_ENABLE_CPP_RTTI = NO
+GCC_ENABLE_CPP_RTTI = YES
 
 // Apple LLVM - Language - Modules
 CLANG_ENABLE_MODULES = YES
@@ -42,8 +45,8 @@ CLANG_MODULES_AUTOLINK = NO
 
 // Apple LLVM - Language - Objective C
 CLANG_ENABLE_OBJC_ARC = YES
-GCC_ENABLE_OBJC_EXCEPTIONS = YES
 CLANG_ENABLE_OBJC_WEAK = YES
+GCC_ENABLE_OBJC_EXCEPTIONS = YES
 
 // Apple LLVM - Preprocessing
 ENABLE_STRICT_OBJC_MSGSEND = YES
@@ -65,6 +68,7 @@ CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES
 CLANG_WARN_INFINITE_RECURSION = YES
 CLANG_WARN_INT_CONVERSION = YES
 CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES
+CLANG_WARN_SEMICOLON_BEFORE_METHOD_BODY = YES
 CLANG_WARN_STRICT_PROTOTYPES = YES
 CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES
 CLANG_WARN_SUSPICIOUS_MOVE = YES
@@ -84,10 +88,10 @@ GCC_WARN_SHADOW = YES
 GCC_WARN_SIGN_COMPARE = YES
 GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES
 GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE
+GCC_WARN_UNKNOWN_PRAGMAS = YES
 GCC_WARN_UNUSED_FUNCTION = YES
 GCC_WARN_UNUSED_LABEL = YES
 GCC_WARN_UNUSED_PARAMETER = YES
-GCC_WARN_UNKNOWN_PRAGMAS = YES
 GCC_WARN_UNUSED_VALUE = YES
 GCC_WARN_UNUSED_VARIABLE = YES
 
@@ -102,6 +106,7 @@ GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES
 CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES
 CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES
 CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES
+CLANG_WARN_OBJC_INTERFACE_IVARS = YES
 CLANG_WARN_OBJC_LITERAL_CONVERSION = YES
 CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES
 CLANG_WARN_OBJC_ROOT_CLASS = YES
@@ -120,10 +125,13 @@ ASSETCATALOG_COMPILER_OPTIMIZATION = space
 // Static Analyzer - Analysis Policy
 RUN_CLANG_STATIC_ANALYZER = YES
 
+// Static Analyzer - Generic Issues
+CLANG_ANALYZER_NONNULL = YES
+
 // Static Analyzer - Issues - Apple APIs
+CLANG_ANALYZER_GCD_PERFORMANCE = YES
 CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = YES
 CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES
-CLANG_ANALYZER_NONNULL = YES
 CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE
 
 // Static Analyzer - Issues - Security
@@ -131,9 +139,11 @@ CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES
 CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES
 CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES
 
-// Swift Compiler - Version
+// Swift Compiler - Code Generation
 SWIFT_SWIFT3_OBJC_INFERENCE = Off
-SWIFT_VERSION = 4.0
+
+// Swift Compiler - Language
+SWIFT_VERSION = 4.2
 
 // Swift Compiler - Warnings Policies
 SWIFT_TREAT_WARNINGS_AS_ERRORS = YES

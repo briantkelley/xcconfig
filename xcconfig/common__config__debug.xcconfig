@@ -1,8 +1,5 @@
 //
-// common__config__debug.xcconfig
-// Brian T. Kelley <brian@briantkelley.com>
-//
-// Xcode settings applicable to all targets in Debug configuration
+// Copyright (c) 2014-2019 Brian T. Kelley
 //
 #include "common.xcconfig"
 
@@ -34,13 +31,14 @@ MTL_OPTIMIZATION_LEVEL = 0
 CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = YES
 
 // Swift Compiler - Code Generation
+SWIFT_COMPILATION_MODE = singlefile
 SWIFT_OPTIMIZATION_LEVEL = -Onone
 
 // Swift Compiler - Custom Flags
 SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG
 
 // Undocumented
+ENABLE_ADDRESS_SANITIZER = YES
+ENABLE_THREAD_SANITIZER = NO
+ENABLE_UNDEFINED_BEHAVIOR_SANITIZER = YES
 CLANG_ADDRESS_SANITIZER_USE_AFTER_SCOPE = YES
-CLANG_THREAD_SANITIZER = NO
-CLANG_UNDEFINED_BEHAVIOR_SANITIZER = YES
-ENABLE_ADDRESS_SANITIZER=YES
