@@ -4,7 +4,7 @@
 
 // Architectures
 ARCHS = $(ARCHS_STANDARD)
-SDKROOT = iphoneos12.1
+SDKROOT = iphoneos12.2
 
 // Code Signing
 CODE_SIGN_IDENTITY[sdk=iphoneos*] = iOS Developer
