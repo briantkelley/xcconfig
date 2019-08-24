@@ -4,10 +4,13 @@
 
 // Architectures
 ARCHS = $(ARCHS_STANDARD_64_BIT)
-SDKROOT = macosx10.14
+SDKROOT = macosx10.15
 
 // Deployment
-MACOSX_DEPLOYMENT_TARGET = 10.14
+MACOSX_DEPLOYMENT_TARGET = 10.15
 
-// Deployment (OS X)
+// Deployment (macOS)
 COMBINE_HIDPI_IMAGES = YES
+
+// Signing
+ENABLE_HARDENED_RUNTIME = YES

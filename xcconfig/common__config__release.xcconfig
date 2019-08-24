@@ -22,3 +22,6 @@ MTL_OPTIMIZATION_LEVEL = s
 // Swift Compiler - Code Generation
 SWIFT_COMPILATION_MODE = wholemodule
 SWIFT_OPTIMIZATION_LEVEL = -Osize
+
+// Swift Compiler - General
+SWIFT_REFLECTION_METADATA_LEVEL = none
