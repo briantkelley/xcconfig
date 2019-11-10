@@ -44,7 +44,6 @@ GCC_ENABLE_CPP_RTTI = YES
 
 // Apple LLVM - Language - Modules
 CLANG_ENABLE_MODULES = YES
-CLANG_MODULES_AUTOLINK = NO
 
 // Apple LLVM - Language - Objective C
 CLANG_ENABLE_OBJC_ARC = YES
