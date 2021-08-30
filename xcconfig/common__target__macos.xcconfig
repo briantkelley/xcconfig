@@ -3,11 +3,10 @@
 //
 
 // Architectures
-ARCHS = $(ARCHS_STANDARD_64_BIT)
-SDKROOT = macosx11.1
+SDKROOT = macosx11.3
 
 // Deployment
-MACOSX_DEPLOYMENT_TARGET = 11.1
+MACOSX_DEPLOYMENT_TARGET = 11.3
 
 // Deployment (macOS)
 COMBINE_HIDPI_IMAGES = YES

@@ -4,10 +4,10 @@
 
 // Architectures
 ARCHS = $(ARCHS_STANDARD)
-SDKROOT = iphoneos14.3
+SDKROOT = iphoneos14.5
 
 // Code Signing
-CODE_SIGN_IDENTITY[sdk=iphoneos*] = iOS Developer
+CODE_SIGN_IDENTITY[sdk=iphoneos*] = Apple Development
 
 // Deployment (iOS)
-IPHONEOS_DEPLOYMENT_TARGET = 14.3
+IPHONEOS_DEPLOYMENT_TARGET = 14.5
