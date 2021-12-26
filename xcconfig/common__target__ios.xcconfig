@@ -1,13 +1,13 @@
 //
-// Copyright (c) 2014-2020 Brian T. Kelley
+// Copyright (c) 2014-2021 Brian T. Kelley
 //
 
 // Architectures
 ARCHS = $(ARCHS_STANDARD)
-SDKROOT = iphoneos14.5
+SDKROOT = iphoneos15.2
 
 // Code Signing
 CODE_SIGN_IDENTITY[sdk=iphoneos*] = Apple Development
 
 // Deployment (iOS)
-IPHONEOS_DEPLOYMENT_TARGET = 14.5
+IPHONEOS_DEPLOYMENT_TARGET = 15.2
