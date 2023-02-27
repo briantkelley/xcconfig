@@ -1,34 +1,29 @@
-//
-// Copyright (c) 2014-2020 Brian T. Kelley
-//
-#include "common.xcconfig"
+// Copyright (c) 2014-2023 Brian T. Kelley
+
+#include "config_all.xcconfig"
 
 // Architectures
 ONLY_ACTIVE_ARCH = YES
 
 // Build Options
 DEBUG_INFORMATION_FORMAT = dwarf
-ENABLE_PREVIEWS = YES
 ENABLE_TESTABILITY = YES
 
-// Deployment
-COPY_PHASE_STRIP = NO
+// Apple Clang - Address Sanitizer
+CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = YES
 
-// Apple LLVM - Code Generation
+// Apple Clang - Code Generation
 GCC_OPTIMIZATION_LEVEL = 0
 
-// Apple LLVM - Preprocessing
+// Apple Clang - Preprocessing
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) DEBUG=1
 
-// Apple LLVM - Undefined Behavior Sanitizer
+// Apple Clang - Undefined Behavior Sanitizer
 CLANG_UNDEFINED_BEHAVIOR_SANITIZER_INTEGER = YES
 CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES
 
 // Metal Compiler - Build Options
 MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE
-
-// Apple LLVM - Address Sanitizer
-CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = YES
 
 // Swift Compiler - Code Generation
 SWIFT_COMPILATION_MODE = singlefile

@@ -1,17 +1,16 @@
-//
-// Copyright (c) 2014-2020 Brian T. Kelley
-//
-#include "common.xcconfig"
+// Copyright (c) 2014-2023 Brian T. Kelley
+
+#include "config_all.xcconfig"
 
 // Build Options
 DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
 VALIDATE_PRODUCT = YES
 
-// Apple LLVM - Code Generation
+// Apple Clang - Code Generation
 GCC_OPTIMIZATION_LEVEL = s
 LLVM_LTO = YES
 
-// Apple LLVM - Preprocessing
+// Apple Clang - Preprocessing
 ENABLE_NS_ASSERTIONS = NO
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) NDEBUG=1
 
@@ -21,6 +20,3 @@ MTL_ENABLE_DEBUG_INFO = NO
 // Swift Compiler - Code Generation
 SWIFT_COMPILATION_MODE = wholemodule
 SWIFT_OPTIMIZATION_LEVEL = -Osize
-
-// Swift Compiler - General
-SWIFT_REFLECTION_METADATA_LEVEL = none
