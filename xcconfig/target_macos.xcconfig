@@ -1,10 +1,10 @@
 // Copyright (c) 2014-2023 Brian T. Kelley
 
 // Architectures
-SDKROOT = macosx13.1
+SDKROOT = macosx13.3
 
 // Deployment
-MACOSX_DEPLOYMENT_TARGET = 13.1
+MACOSX_DEPLOYMENT_TARGET = 13.3
 
 // Deployment (macOS)
 COMBINE_HIDPI_IMAGES = YES
