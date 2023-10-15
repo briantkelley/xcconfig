@@ -1,10 +1,10 @@
 // Copyright (c) 2014-2023 Brian T. Kelley
 
 // Architectures
-SDKROOT = iphoneos16.4
+SDKROOT = iphoneos17.0
 
 // Code Signing
 CODE_SIGN_IDENTITY[sdk=iphoneos*] = Apple Development
 
 // Deployment (iOS)
-IPHONEOS_DEPLOYMENT_TARGET = 16.4
+IPHONEOS_DEPLOYMENT_TARGET = 17.0
