@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2023 Brian T. Kelley
+// Copyright (c) 2014-2024 Brian T. Kelley
 
 #include "config_all.xcconfig"
 
@@ -21,6 +21,9 @@ GCC_PREPROCESSOR_DEFINITIONS = $(inherited) DEBUG=1
 // Apple Clang - Undefined Behavior Sanitizer
 CLANG_UNDEFINED_BEHAVIOR_SANITIZER_INTEGER = YES
 CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES
+
+// Asset Catalog Compiler - Options
+ENABLE_ONLY_ACTIVE_RESOURCES = YES
 
 // Metal Compiler - Build Options
 MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE
