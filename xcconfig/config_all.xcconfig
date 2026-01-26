@@ -46,16 +46,7 @@ CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = YES
 GCC_NO_COMMON_BLOCKS = YES
 
 // Apple Clang - Custom Compiler Flags
-	// -Wc++98-compat[-pedantic] is disabled because the standard is 20+ years
-	//     old. C++11 compatibility is the oldest anyone should care about.
-	// -Wdirect-ivar-access is disabled because accessing an ivar in -init or
-	//     -dealloc, or which is an implementation detail and not a property,
-	//     is both reasonable and valid.
-	// -Wgnu-zero-variadic-macro-arguments is disabled so NSAssert compiles
-	//     when assertions are disabled.
-	// -Wpadded is disabled so structures don't require dummy variables to
-	//     explicitly expand to the alignment boundary.
-WARNING_CFLAGS = -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-direct-ivar-access -Wno-gnu-zero-variadic-macro-arguments -Wno-padded
+WARNING_CFLAGS = $(inherited)
 
 // Apple Clang - Language
 GCC_C_LANGUAGE_STANDARD = c23
