@@ -1,0 +1,37 @@
+// Copyright (c) 2026 Brian T. Kelley
+
+// Include this file **and set `WARNING_CFLAGS`** as illustrated below in your
+// build configuration's settings file to enable additional diagnostics for C,
+// C++, Objective-C, and Objective-C++.
+//
+//     #include "config_shared_extra.xcconfig"
+//
+//     // Apple Clang - Custom Compiler Flags
+//     WARNING_CFLAGS = $(inherited) $(CLANG_WARN_EXTRA_CFLAGS)
+//
+// To customize the build settings provided by this file, simply assign a new
+// value to the desired variables in your build configuration settings file
+// after the `#include` of this file. For example:
+//
+//     CLANG_WARN_UNUSED_BUT_SET_VARIABLE = YES_ERROR
+//
+// All Boolean warnings support values of `NO`, `YES`, and `YES_ERROR`.
+
+/// Warn about atomic-by-default Objective-C properties with a user-defined
+/// implementation.
+///
+/// If the property implementation supports simultaneous access of the getter
+/// and/or setter from different threads, add the `atomic` attribute. Otherwise,
+/// add the `nonatomic` attribute.
+CLANG_WARN_CUSTOM_ATOMIC_PROPERTIES = YES_ERROR
+
+/// Warn if a `switch` statement is missing a `default` label. For example, this
+/// can catch forward compatibility problems that may occur if an external
+/// library (e.g., an OS framework) adds a new `enum` identifier.
+CLANG_WARN_SWITCH_DEFAULT = YES_ERROR
+
+/// Warn if a variable is set but never read. For example, this can catch a typo
+/// in variable use, or obsolete code due to downstream changes in a function.
+CLANG_WARN_UNUSED_BUT_SET_VARIABLE = YES
+
+#include "config_shared_extra_impl.xcconfig"

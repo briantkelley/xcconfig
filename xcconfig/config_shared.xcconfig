@@ -45,9 +45,6 @@ CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = YES
 // Apple Clang - Code Generation
 GCC_NO_COMMON_BLOCKS = YES
 
-// Apple Clang - Custom Compiler Flags
-WARNING_CFLAGS = $(inherited)
-
 // Apple Clang - Language
 GCC_C_LANGUAGE_STANDARD = c23
 
