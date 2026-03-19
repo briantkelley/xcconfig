@@ -16,7 +16,7 @@ For more information about Xcode configuration settings files, check out the WWD
 
 ### Additional Build Configuration Settings
 
-The build configuration settings provided here attempt to be useful without being overbearing. Project maintainers that wish to enable strict adherence to the best practices and/or enable more pedantic diagnostics should consider including [`config_strict.xcconfig`](xcconfig/config_strict.xcconfig) in their build configuration settings amalgamation file.
+The build configuration settings provided here attempt to be useful without being overbearing. Project maintainers that wish to enable strict adherence to the best practices and/or enable more pedantic diagnostics should consider including [`config_shared_strict.xcconfig`](xcconfig/config_shared_strict.xcconfig) in their build configuration settings amalgamation file.
 
 ### SDK Versions
 
@@ -28,7 +28,7 @@ In my opinion, however, this convenience is a disservice to the long-term mainta
 
 The configuration settings files in the [`xcconfig`](xcconfig) directory use a <tt>*dimension*\_*value*.xcconfig</tt> naming convention with all letters in lowercase.
 
-`config_` files specify settings for a particular **build configuration**, typically *Debug* or *Release*. As a special case, [`config_all.xcconfig`](xcconfig/config_all.xcconfig) contains configuration settings used in all dimensions and values. (The rationale for this approach is twofold: Xcode requires a build configuration value for each build, and this dimension is more general than the others.)
+`config_` files specify settings for a particular **build configuration**, typically *Debug* or *Release*. As a special case, [`config_shared.xcconfig`](xcconfig/config_shared.xcconfig) contains configuration settings used in all dimensions and values. (The rationale for this approach is twofold: Xcode requires a build configuration value for each build, and this dimension is more general than the others.)
 
 `target_` files specify a **target destination**'s configuration settings, like *iOS* or *macOS*.
 
@@ -58,8 +58,8 @@ git branch -D xcconfig-split
 Next, create a configuration settings file for your app target, for example, `todo_app.xcconfig`. Then, use `#include` to incorporate the build settings file for its target destination.
 
 ```
+#include "../../xcconfig/config_shared_strict.xcconfig" // optional
 #include "../../xcconfig/target_ios.xcconfig"
-#include "../../xcconfig/config_strict.xcconfig" // optional
 
 // Packaging
 INFOPLIST_FILE = ToDo/Info.plist
