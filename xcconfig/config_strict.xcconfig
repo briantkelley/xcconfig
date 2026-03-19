@@ -1,0 +1,25 @@
+// Copyright (c) 2014-2026 Brian T. Kelley
+
+// Include this file in your build configuration's settings file to enable
+// stricter diagnostics for C, C++, Objective-C, and Objective-C++.
+//
+//     #include "config_strict.xcconfig"
+//
+// To customize the build settings configured by this file, simply assign a new
+// value to the desired variables in your build configuration settings file
+// after the `#include` of this file. For example:
+//
+//     GCC_WARN_SHADOW = NO
+
+// Apple Clang - Warning Policies
+GCC_TREAT_WARNINGS_AS_ERRORS = YES
+GCC_WARN_UNUSED_PARAMETER = YES
+
+// Apple Clang - Warnings - All languages
+GCC_WARN_SHADOW = YES
+
+// Apple Clang - Warnings - C++
+CLANG_WARN_VEXING_PARSE = YES
+
+// Apple Clang - Warnings - Objective-C
+CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES

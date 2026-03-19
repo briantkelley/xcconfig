@@ -14,6 +14,10 @@ Configuration settings files have a few advantages compared to specifying settin
 
 For more information about Xcode configuration settings files, check out the WWDC 2021 session [Explore advanced project configuration in Xcode](https://developer.apple.com/videos/play/wwdc2021/10210/).
 
+### Additional Build Configuration Settings
+
+The build configuration settings provided here attempt to be useful without being overbearing. Project maintainers that wish to enable strict adherence to the best practices and/or enable more pedantic diagnostics should consider including [`config_strict.xcconfig`](xcconfig/config_strict.xcconfig) in their build configuration settings amalgamation file.
+
 ### SDK Versions
 
 The `SDKROOT` build setting specifies the path of the SDK to use for the build. As a convenience, Xcode has always accepted an SDK's *canonical name* (e.g., `iphoneos12.0`) as shorthand and a machine-independent way to specify the SDK path. In Xcode 6 for iOS and Xcode 8 for macOS, Xcode added support for simply specifying an SDK's base name (e.g., `iphoneos`) as a convenience to eliminate a paper cut encountered when updating Xcode versions. (tvOS and watchOS have always supported this convenience.)
@@ -55,6 +59,7 @@ Next, create a configuration settings file for your app target, for example, `to
 
 ```
 #include "../../xcconfig/target_ios.xcconfig"
+#include "../../xcconfig/config_strict.xcconfig" // optional
 
 // Packaging
 INFOPLIST_FILE = ToDo/Info.plist
