@@ -17,6 +17,21 @@
 //
 // All Boolean warnings support values of `NO`, `YES`, and `YES_ERROR`.
 
+/// Warn about function pointer casts that alter its prototype.
+///
+/// Values:
+///
+/// * NONE: Do not warn about suspicious function pointer casts.
+/// * MISMATCH: Warn about casts to an ABI incompatible prototype. For
+///   example, this can catch casts that change the number of parameters or
+///   the size of one or more parameters.
+/// * STRICT: Warn about any non-exact match, even when ABI compatible. For
+///   example, this can catch implicit casts that discard a const qualifier.
+///
+/// `MISMATCH` and `STRICT` can be suffixed with `_ERROR` to issue error level
+/// diagnostics instead of warning level.
+CLANG_WARN_CAST_FUNCTION_TYPE = MISMATCH
+
 /// Warn about atomic-by-default Objective-C properties with a user-defined
 /// implementation.
 ///
@@ -24,6 +39,27 @@
 /// and/or setter from different threads, add the `atomic` attribute. Otherwise,
 /// add the `nonatomic` attribute.
 CLANG_WARN_CUSTOM_ATOMIC_PROPERTIES = YES_ERROR
+
+/// Warn about variables that require a constructor invocation as part of the
+/// image load process. This can help avoid the static variable initialization
+/// order fiasco.
+CLANG_WARN_GLOBAL_CONSTRUCTORS = YES
+
+/// Warn about implementations of `+[NSObject load]`, which can increase image
+/// load time.
+CLANG_WARN_OBJC_LOAD_METHOD = YES
+
+/// Warn about attribute, identifier, macro, module, and user-defined literal
+/// names that contain patterns reserved by the language or platform.
+CLANG_WARN_RESERVED_IDENTIFIER = YES
+
+/// Warn about an override of a virtual function without use of the `override`
+/// specifier.
+CLANG_WARN_SUGGEST_OVERRIDE = YES
+
+/// Warn about an override of a virtual destructor without use of the `override`
+/// specifier.
+CLANG_WARN_SUGGEST_DESTRUCTOR_OVERRIDE = YES
 
 /// Warn if a `switch` statement is missing a `default` label. For example, this
 /// can catch forward compatibility problems that may occur if an external
@@ -33,5 +69,10 @@ CLANG_WARN_SWITCH_DEFAULT = YES_ERROR
 /// Warn if a variable is set but never read. For example, this can catch a typo
 /// in variable use, or obsolete code due to downstream changes in a function.
 CLANG_WARN_UNUSED_BUT_SET_VARIABLE = YES
+
+/// Warn if a class emits a weak vtable. Weak vtables may inhibit some
+/// optimizations. Such classes emit a vtable in every translation unit, which
+/// increases build times and object file size.
+CLANG_WARN_WEAK_VTABLES = YES
 
 #include "config_shared_extra_impl.xcconfig"
